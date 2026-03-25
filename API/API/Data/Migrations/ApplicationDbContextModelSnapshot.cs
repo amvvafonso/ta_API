@@ -15,7 +15,7 @@ namespace API.Data.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "10.0.3");
+            modelBuilder.HasAnnotation("ProductVersion", "10.0.5");
 
             modelBuilder.Entity("API.Models.Category", b =>
                 {
@@ -39,15 +39,12 @@ namespace API.Data.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Cellphone")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Country")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
@@ -55,11 +52,9 @@ namespace API.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("PostalCode")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("TaxNumber")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -81,6 +76,7 @@ namespace API.Data.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
+                        .HasMaxLength(500)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("File")
@@ -92,6 +88,7 @@ namespace API.Data.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
+                        .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

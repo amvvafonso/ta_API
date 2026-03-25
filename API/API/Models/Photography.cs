@@ -21,12 +21,13 @@ public class Photography
     /// </summary>
     [StringLength(50)]
     [Display(Name = "Título")]
-    [Required(ErrorMessage = "Título é obrigat´roio")]
+    [Required(ErrorMessage = "Título é obrigatório")]
     public string Title { get; set; }
     
     /// <summary>
     /// Descricao do produto
     /// </summary>
+    [StringLength(500)]
     public string Description { get; set; }
     
     /// <summary>
