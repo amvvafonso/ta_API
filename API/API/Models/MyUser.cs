@@ -13,40 +13,41 @@ public class MyUser
     /// <summary>
     /// Nome do user
     /// </summary>
+    [Required]
     public string Name { get; set; }
     
     /// <summary>
     /// Morada do user
     /// </summary>
-    public string Address { get; set; }
+    public string? Address { get; set; }
     
     /// <summary>
     /// Codigo postal
     /// </summary>
-    public string PostalCode { get; set; }
+    public string? PostalCode { get; set; }
     
     /// <summary>
     /// País
     /// </summary>
-    public string Country { get; set; }
+    public string? Country { get; set; }
     
     /// <summary>
     /// Numero de contribuinte
     /// </summary>
-    public string TaxNumber { get; set; }
+    public string? TaxNumber { get; set; }
     
     /// <summary>
     /// Numero de telemovel
     /// </summary>
-    public string Cellphone { get; set; }
+    public string? Cellphone { get; set; }
     
     
     /* ************************* 
      *   Relacionamentos 1-N   *
      ************************* */
-    
+
     /// <summary>
     /// Lista de compras
     /// </summary>
-    public ICollection<Purchase> Purchases { get; set; }
+    public ICollection<Purchase> Purchases { get; set; } = [];
 }
